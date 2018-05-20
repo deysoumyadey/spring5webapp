@@ -1,4 +1,4 @@
-package model;
+package com.example.spring5webapp.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -18,7 +18,8 @@ public class Book {
     private String publisher;
 
     @ManyToMany
-    @JoinTable(name="author book", joinColumns = @JoinColumn(name="book_id"))
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
 
     public Book(){}
