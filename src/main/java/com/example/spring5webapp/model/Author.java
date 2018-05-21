@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Created by SD
+ * Created by SD on 5/19/2018
  */
 @Entity
 public class Author {
